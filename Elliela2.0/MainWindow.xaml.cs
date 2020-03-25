@@ -105,10 +105,7 @@ namespace Elliela2._0
             System.Windows.Application.Current.Shutdown();
         }
 
-        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            System.Windows.Application.Current.Shutdown();
-        }
+       
     }
 
 }

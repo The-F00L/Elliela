@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -51,8 +52,8 @@ namespace Elliela2._0
         private string boxOffice;
         private string production;
         private string website;
-        
 
+        private Uri local;
 
         public void setData(string id) {
             string baseUri = $"http://www.omdbapi.com/?apikey=386eaee4";
@@ -106,7 +107,36 @@ namespace Elliela2._0
         }
 
         public void visData() {
-            posterImg.Source = new BitmapImage(new Uri(poster));
+            if (poster.Equals("N/A"))
+            {
+                posterImg.Source = new BitmapImage(new Uri("/rsc/notavaible.jpg", UriKind.Relative));
+            }
+            else
+            {
+                posterImg.Source = new BitmapImage(new Uri(poster));
+            }
+            titleText.Content = this.title;
+            yearText.Content = this.year;
+            ratedText.Content = this.rated;
+            releasedText.Content = this.released;
+            runtimeText.Content = this.runtime;
+            genreText.Content = this.genre;
+            directorText.Content = this.director;
+            writerText.Content = this.writer;
+            actorsText.Content = this.actors;
+            plotText.Text = this.plot;
+            languageText.Content = this.lang;
+            countryText.Content = this.country;
+            awardsText.Content = this.awards;
+            metalscoreText.Content = this.metalScore;
+            imdbRatingText.Content = this.imdbRating;
+            imdbvotesText.Content = this.imdbVotes;
+            typeText.Content = this.type;
+            dvdText.Content = this.dvdRel;
+            boxOfficeText.Content = this.boxOffice;
+            productionText.Content = this.production;
+            webSiteText.Content = this.website;
+
         }
 
 
@@ -115,5 +145,22 @@ namespace Elliela2._0
             e.Cancel = true;
             this.Visibility=Visibility.Collapsed;
         }
+
+        private void AddLoc_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Media files (*.mp4;*.mkv;*.flc)|*.mp4;*.mkv;*.flc|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+                local = new Uri(openFileDialog.FileName);
+
+            manageLocalSave localMan = new manageLocalSave();
+            localMan.tableTypeSelect(this.type,local,this.imdbId);
+
+        }
+
+        
+
+
+
     }
 }

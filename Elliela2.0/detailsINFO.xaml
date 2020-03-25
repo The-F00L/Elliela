@@ -7,8 +7,54 @@
         mc:Ignorable="d"
         Title="detailsINFO" Height="560" Width="640" Closing="DetailsInfoWindow_Closing">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="530" VerticalAlignment="Top" Width="630">
-            <Image x:Name="posterImg" HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="280"/>
+        <Grid HorizontalAlignment="Left" Height="530" VerticalAlignment="Top" Width="630" Margin="0,0,0,-1">
+            <Image x:Name="posterImg" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="258" />
+            <Label Content="Title:" HorizontalAlignment="Left" Margin="266,10,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="titleText" Content="" HorizontalAlignment="Left" Margin="303,10,0,0" VerticalAlignment="Top" Width="300"/>
+            <Label Content="Year:" HorizontalAlignment="Left" Margin="266,36,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="yearText" Content="" HorizontalAlignment="Left" Margin="308,36,0,0" VerticalAlignment="Top" Width="100"/>
+            <Label Content="Rated:" HorizontalAlignment="Left" Margin="263,62,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="ratedText" Content="" HorizontalAlignment="Left" Margin="319,62,0,0" VerticalAlignment="Top" Width="75"/>
+            <Label Content="Released:" HorizontalAlignment="Left" Margin="427,36,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="releasedText" Content="" HorizontalAlignment="Left" Margin="501,36,0,0" VerticalAlignment="Top" Width="82"/>
+            <Label Content="Runtime:" HorizontalAlignment="Left" Margin="429,62,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="runtimeText" Content="" HorizontalAlignment="Left" Margin="501,62,0,0" VerticalAlignment="Top" Width="76"/>
+            <Label Content="Genre:" HorizontalAlignment="Left" Margin="266,88,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="genreText" Content="" HorizontalAlignment="Left" Margin="321,88,0,0" VerticalAlignment="Top" Width="282"/>
+            <Label Content="Director:" HorizontalAlignment="Left" Margin="268,119,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="directorText" Content="" HorizontalAlignment="Left" Margin="332,119,0,0" VerticalAlignment="Top" Width="258"/>
+            <Label Content="Writer:" HorizontalAlignment="Left" Margin="268,145,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="writerText" HorizontalAlignment="Left" Margin="316,145,0,0" VerticalAlignment="Top" Width="304" Height="28" Content="" FontSize="10"/>
+            <Label Content="Actors:" HorizontalAlignment="Left" Margin="268,171,0,0" VerticalAlignment="Top"/>
+            <Label Content="Plot:" HorizontalAlignment="Left" Margin="272,202,0,0" VerticalAlignment="Top"/>
+            <Label Content="Language:" HorizontalAlignment="Left" Margin="268,248,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="languageText" Content="" HorizontalAlignment="Left" Margin="335,248,0,0" VerticalAlignment="Top" Width="276"/>
+            <Label Content="Country:" HorizontalAlignment="Left" Margin="268,274,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="countryText" Content="" HorizontalAlignment="Left" Margin="332,274,0,0" VerticalAlignment="Top" Width="276"/>
+            <Label Content="Awards:" HorizontalAlignment="Left" Margin="268,305,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="awardsText" Content="" HorizontalAlignment="Left" Margin="325,305,0,0" VerticalAlignment="Top" Width="276"/>
+            <Label Content="Rating:" HorizontalAlignment="Left" Margin="266,331,0,0" VerticalAlignment="Top"/>
+            <Label Content="Metalscore:" HorizontalAlignment="Left" Margin="323,331,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="metalscoreText" Content="" HorizontalAlignment="Left" Margin="399,331,0,0" VerticalAlignment="Top" Width="57"/>
+            <Label Content="IMDB Rating:" HorizontalAlignment="Left" Margin="461,331,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="imdbRatingText" Content="" HorizontalAlignment="Left" Margin="545,331,0,0" VerticalAlignment="Top" Width="75"/>
+            <Label Content="IMDB Votes:" HorizontalAlignment="Left" Margin="466,357,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="imdbvotesText" Content="" HorizontalAlignment="Left" Margin="545,362,0,0" VerticalAlignment="Top" Width="75"/>
+            <Label Content="Type:" HorizontalAlignment="Left" Margin="268,362,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="typeText" Content="" HorizontalAlignment="Left" Margin="310,362,0,0" VerticalAlignment="Top" Width="54"/>
+            <Label Content="DVD:" HorizontalAlignment="Left" Margin="268,393,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="dvdText" Content="" HorizontalAlignment="Left" Margin="319,393,0,0" VerticalAlignment="Top" Width="45"/>
+            <Label Content="Box Office:" HorizontalAlignment="Left" Margin="272,424,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="boxOfficeText" Content="" HorizontalAlignment="Left" Margin="344,424,0,0" VerticalAlignment="Top" Width="82"/>
+            <Label Content="Production:" HorizontalAlignment="Left" Margin="272,455,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="productionText" Content="" HorizontalAlignment="Left" Margin="348,455,0,0" VerticalAlignment="Top" Width="255"/>
+            <Label Content="Web Site" HorizontalAlignment="Left" Margin="271,481,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="webSiteText" Content="" HorizontalAlignment="Left" Margin="335,481,0,0" VerticalAlignment="Top" Width="276"/>
+            <Label x:Name="actorsText" Content="" HorizontalAlignment="Left" Margin="321,178,0,0" VerticalAlignment="Top" Height="19" Width="309"/>
+            <Button x:Name="addLoc" Content="Add location" HorizontalAlignment="Left" Margin="42,456,0,0" VerticalAlignment="Top" Width="134" Height="41" Click="AddLoc_Click"/>
+            <StackPanel Orientation="Horizontal" Margin="319,208,5,284">
+                <TextBlock x:Name="plotText"  HorizontalAlignment="Center" TextWrapping="Wrap" MaxWidth="50" VerticalAlignment="Top" FontSize="12" Text="{Binding InstructionLabel}" Width="304" Height="38" RenderTransformOrigin="0.5,0.461"  />
+            </StackPanel>
         </Grid>
 
 

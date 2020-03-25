@@ -4,7 +4,7 @@
         xmlns:local="clr-namespace:Elliela2._0"
         Title="Elliale 2.0" Height="782" Width="835.333"
         
-        MinWidth="300" SizeToContent="WidthAndHeight" Closed="MainWindow_Closed" Closing="MainWindow_Closing">
+        MinWidth="300" SizeToContent="WidthAndHeight" Closed="MainWindow_Closed" >
     
 
     <Grid>
