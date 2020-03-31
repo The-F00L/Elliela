@@ -108,6 +108,7 @@
         </Button>
         <TextBlock x:Name="actorsText"  HorizontalAlignment="Stretch" TextWrapping="Wrap"  FontSize="12" Text="{Binding InstructionLabel}"  Margin="474,269,4,0" RenderTransformOrigin="0.485,0.463" Height="51" VerticalAlignment="Top"   />
         <TextBlock x:Name="languageText"  HorizontalAlignment="Stretch" TextWrapping="Wrap"  FontSize="12" Text="{Binding InstructionLabel}"  Margin="423,95,259,0" RenderTransformOrigin="0.485,0.463" Height="52" VerticalAlignment="Top"   />
+        <Label Content="Select type:" HorizontalAlignment="Left" Margin="29,10,0,0" VerticalAlignment="Top" Height="32" Width="102" FontSize="18"/>
 
     </Grid>
 </Page>

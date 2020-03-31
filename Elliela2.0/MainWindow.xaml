@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Elliela2._0"
         Title="Elliale 2.0" Height="782" Width="835.333"
+        Icon="ellielaPlayerIcon.ico"
         
         MinWidth="300" SizeToContent="WidthAndHeight" Closed="MainWindow_Closed" Background="Black" KeyDown="MainWindow_KeyDown" >
 
