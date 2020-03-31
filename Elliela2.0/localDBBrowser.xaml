@@ -1,0 +1,20 @@
+﻿<Window x:Class="Elliela2._0.localDBBrowser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Elliela2._0"
+        mc:Ignorable="d"
+        Title="Local Database Browser" Height="640.333" Width="860" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Closing="Window_Closing">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="top">
+            <Button x:Name="overviewButton"  Content="Overview"  Click="OverviewButton_Click" Width="85"/>
+            <Button x:Name="searchLocal" Content="Search local" Click="LocalDBSearch_Click" Width="78" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <Frame x:Name="main" Margin="0,40,0,0" NavigationUIVisibility="Hidden" />
+
+    </Grid>
+
+</Window>

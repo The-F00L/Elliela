@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WinForms = System.Windows.Forms;
 
 namespace Elliela2._0
 {
@@ -54,6 +55,8 @@ namespace Elliela2._0
         private string website;
 
         private Uri local;
+        private string comment;
+
 
         public void setData(string id) {
             string baseUri = $"http://www.omdbapi.com/?apikey=386eaee4";
@@ -96,7 +99,7 @@ namespace Elliela2._0
                         }
                     else
                     {
-                         MessageBox.Show("Movie not Found!!!");
+                    System.Windows.MessageBox.Show("Movie not Found!!!");
                        
                     }
 
@@ -123,7 +126,7 @@ namespace Elliela2._0
             genreText.Content = this.genre;
             directorText.Content = this.director;
             writerText.Content = this.writer;
-            actorsText.Content = this.actors;
+            actorsText.Text = this.actors;
             plotText.Text = this.plot;
             languageText.Content = this.lang;
             countryText.Content = this.country;
@@ -148,19 +151,43 @@ namespace Elliela2._0
 
         private void AddLoc_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Media files (*.mp4;*.mkv;*.flc)|*.mp4;*.mkv;*.flc|All files (*.*)|*.*";
-            if (openFileDialog.ShowDialog() == true)
-                local = new Uri(openFileDialog.FileName);
+            if (this.type.Equals("series"))
+            {
+                WinForms.FolderBrowserDialog folderDialog = new WinForms.FolderBrowserDialog();
+                folderDialog.ShowNewFolderButton = false;
+                folderDialog.SelectedPath = System.AppDomain.CurrentDomain.BaseDirectory;
+                WinForms.DialogResult result = folderDialog.ShowDialog();
+                if (result == WinForms.DialogResult.OK)
+                    local = new Uri(folderDialog.SelectedPath);
 
-            manageLocalSave localMan = new manageLocalSave();
-            localMan.tableTypeSelect(this.type,local,this.imdbId);
+            }
+            if (this.type.Equals("movie"))
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Media files (*.mp4;*.mkv;*.flc)|*.mp4;*.mkv;*.flc|All files (*.*)|*.*";
+                if (openFileDialog.ShowDialog() == true)
+                    local = new Uri(openFileDialog.FileName);
+            }
+
+            try
+            {
+                manageLocalSave localMan = new manageLocalSave();
+                localMan.tableTypeSelect(this.title,this.year,this.rated,this.released,this.runtime,this.genre,this.director,this.writer,this.actors,this.plot,this.lang,this.country,this.awards,this.poster,this.imdbId,this.type,this.dvdRel,this.website,this.comment,this.local);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unhandled Error");
+                MessageBox.Show("The program determinate!");
+                System.Windows.Application.Current.Shutdown();
+            }
+
 
         }
-
         
-
-
-
+        private void CommentText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string richtext = new TextRange(commentText.Document.ContentStart, commentText.Document.ContentEnd).Text;
+            this.comment = richtext;
+        }
     }
 }

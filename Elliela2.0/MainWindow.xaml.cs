@@ -25,6 +25,10 @@ namespace Elliela2._0
     {
         private bool mediaPlayerIsPlaying = false;
         private bool userIsDraggingSlider = false;
+        private string title;
+        private Uri path;
+        private static localDBBrowser localDB = new localDBBrowser();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -44,6 +48,15 @@ namespace Elliela2._0
                 sliderProgressStatus.Maximum = mediaPlayer.NaturalDuration.TimeSpan.TotalSeconds;
                 sliderProgressStatus.Value = mediaPlayer.Position.TotalSeconds;
             }
+            if (localDB.getPlay())
+            {
+                mediaPlayer.Source = localDB.getPath();
+                mediaPlayer.Play();
+                mediaPlayer.Stretch = Stretch.Uniform;
+                localDB.Visibility = Visibility.Hidden;
+                localDB.setPlay();
+            }
+            
         }
 
 
@@ -93,7 +106,7 @@ namespace Elliela2._0
         {
             mediaPlayer.Stop();
         }
-
+        
         private void SearchDBButton_Click(object sender, RoutedEventArgs e)
         {
             Search searchWpf = new Search();
@@ -105,7 +118,41 @@ namespace Elliela2._0
             System.Windows.Application.Current.Shutdown();
         }
 
-       
+        private void LocalDBButton_Click(object sender, RoutedEventArgs e)
+        {
+            localDB.Show();
+        }
+
+        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key==Key.C)
+            {
+                mediaPlayer.Play();
+            }
+            if (e.Key==Key.V)
+            {
+                mediaPlayer.Pause();
+            }
+            if (e.Key==Key.B)
+            {
+                mediaPlayer.Volume++;
+            }
+            if (e.Key==Key.N)
+            {
+                mediaPlayer.Volume--;
+            }
+            if (e.Key==Key.M)
+            {
+                mediaPlayer.Stop();
+            }
+
+        }
+
+        private void AboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            AboutBox about = new AboutBox();
+            about.Show();
+        }
     }
 
 }

@@ -1,0 +1,126 @@
+﻿<Page x:Class="Elliela2._0.searchLocal"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Elliela2._0"
+      mc:Ignorable="d" 
+      Height="571" Width="854" 
+      d:DesignHeight="450"
+      Title="searchLocal">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFAC1717" Offset="1"/>
+                <GradientStop Color="#FFEAAAAA" Offset="0.59"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label x:Name="searchForLabel" Content="Search for:" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Height="37" Width="101" FontSize="18" Visibility="Visible"/>
+        <ComboBox x:Name="filterTypeList" HorizontalAlignment="Left" Margin="72,75,0,0" VerticalAlignment="Top" Width="148" DropDownClosed="FilterTypeList_DropDownClosed" Height="37" FontSize="18" DropDownOpened="FilterTypeList_DropDownOpened" RenderTransformOrigin="0.493,0.544" Visibility="Visible"/>
+        <ListBox x:Name="optionList"  HorizontalAlignment="Left" Height="417" Margin="45,120,0,0" VerticalAlignment="Top" Width="214" Visibility="Visible"/>
+        <ListBox x:Name="ParameterList" HorizontalAlignment="Left" Height="417" Margin="599,120,0,0" VerticalAlignment="Top" Width="214" Visibility="Visible"/>
+        <Button x:Name="addFilterButton" Content="Add filter" HorizontalAlignment="Left" Margin="348,174,0,0" VerticalAlignment="Top" Width="158" Height="36" Click="AddFilterButton_Click" Visibility="Visible"/>
+        <Button x:Name="deleteParameterButton"  Content="Delete parameter" HorizontalAlignment="Left" Margin="348,244,0,0" VerticalAlignment="Top" Width="158" Height="36" Click="DeleteParameterButton_Click" Visibility="Visible"/>
+        <Button x:Name="viewResultButton" Content="View Result" HorizontalAlignment="Left" Margin="348,309,0,0" VerticalAlignment="Top" Width="158" Height="36" Click="ViewResultButton_Click" Visibility="Visible"/>
+        <Button x:Name="clearResult" Content="Clear" HorizontalAlignment="Left" Height="30" Margin="33,31,0,0" VerticalAlignment="Top" Width="112"  Visibility="Hidden" Click="ClearResult_Click" FontSize="16" BorderBrush="#FFEAAAAA">
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFEAAAAA" Offset="1"/>
+                    <GradientStop Color="#FF846060" Offset="0.028"/>
+                    <GradientStop Color="#FF986E6E" Offset="0.819"/>
+                    <GradientStop Color="#FF0E0A0A"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+        <ListBox x:Name="resultlistTitle" HorizontalAlignment="Left" Height="469" Margin="15,68,0,0" VerticalAlignment="Top" Width="155" Visibility="Hidden" SelectionChanged="resultListTitle_SelectionChanged"/>
+        <Image x:Name="posterImg" HorizontalAlignment="Left" Height="310" Margin="193,132,0,0" VerticalAlignment="Top" Width="214" Visibility="Hidden"/>
+        <Label x:Name="titleLabel" Content="Title:" HorizontalAlignment="Left" Margin="177,20,0,0" VerticalAlignment="Top" Height="30" Width="53" FontSize="16" Visibility="Hidden"/>
+        <Label x:Name="titleText" Content="" HorizontalAlignment="Left" Margin="235,4,0,0" VerticalAlignment="Top" Width="331" Height="51" FontSize="24" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-25.253"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="12.028"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="yearLabel" Content="Year:" HorizontalAlignment="Left" Margin="600,64,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="yearText" Content="" HorizontalAlignment="Left" Margin="648,67,0,0" VerticalAlignment="Top" Width="154" Visibility="Hidden"/>
+        <Label x:Name="ratedLabel" Content="Rated:" HorizontalAlignment="Left" Margin="600,90,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="ratedText" Content="" HorizontalAlignment="Left" Margin="651,90,0,0" VerticalAlignment="Top" Width="151" Height="24" Visibility="Hidden"/>
+        <Label x:Name="releasedLabel"  Content="Released:" HorizontalAlignment="Left" Margin="598,9,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="releasedText" Content="" HorizontalAlignment="Left" Margin="662,10,0,0" VerticalAlignment="Top" Width="134" Visibility="Hidden"/>
+        <Label x:Name="runtimeLabel" Content="Runtime:" HorizontalAlignment="Left" Margin="600,38,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="runtimeText" Content="" HorizontalAlignment="Left" Margin="662,38,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.737,0.577" Visibility="Hidden"/>
+        <Label x:Name="genreLabel" Content="Genre:" HorizontalAlignment="Left" Margin="423,172,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="genreText" Content="" HorizontalAlignment="Left" Margin="484,172,0,0" VerticalAlignment="Top" Width="312" Visibility="Hidden"/>
+        <Label x:Name="directorLabel" Content="Director:" HorizontalAlignment="Left" Margin="424,203,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="directorText" Content="" HorizontalAlignment="Left" Margin="484,203,0,0" VerticalAlignment="Top" Width="312" Visibility="Hidden"/>
+        <Label x:Name="writerLabel" Content="Writer:" HorizontalAlignment="Left" Margin="423,231,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="writerText" HorizontalAlignment="Left" Margin="474,229,0,0" VerticalAlignment="Top" Width="322" Height="28" Content="" FontSize="10" Visibility="Hidden"/>
+        <Label x:Name="actorsLabel" Content="Actors:" HorizontalAlignment="Left" Margin="424,257,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="plotLabel" Content="Plot:" HorizontalAlignment="Left" Margin="424,320,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="langLabel" Content="Language:" HorizontalAlignment="Left" Margin="415,64,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="countryLabel" Content="Country:" HorizontalAlignment="Left" Margin="600,141,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="countryText" Content="" HorizontalAlignment="Left" Margin="658,140,0,0" VerticalAlignment="Top" Width="142" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.027"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="awardsLabel" Content="Awards:" HorizontalAlignment="Left" Margin="423,435,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="awardsText" Content="" HorizontalAlignment="Left" Margin="484,435,0,0" VerticalAlignment="Top" Width="318" Visibility="Hidden"/>
+        <Label x:Name="typeLabel" Content="Type:" HorizontalAlignment="Left" Margin="600,114,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="typeText" Content="" HorizontalAlignment="Left" Margin="662,114,0,0" VerticalAlignment="Top" Width="126" Visibility="Hidden"/>
+        <Label x:Name="dvdLabel" Content="DVD Realese:" HorizontalAlignment="Left" Margin="193,499,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="dvdText" Content="" HorizontalAlignment="Left" Margin="222,525,0,0" VerticalAlignment="Top" Width="126" RenderTransformOrigin="0.5,0.5" Foreground="#FFC51A1A" BorderBrush="Gold" BorderThickness="2,1" HorizontalContentAlignment="Center" Visibility="Hidden">
+            <Label.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFB5E7F1" Offset="0.434"/>
+                </RadialGradientBrush>
+            </Label.Background>
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-8.259"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBlock x:Name="plotText"  HorizontalAlignment="Stretch" TextWrapping="Wrap"  FontSize="12" Text="{Binding InstructionLabel}"  Margin="466,320,-2,0" RenderTransformOrigin="0.485,0.463" Height="110" VerticalAlignment="Top" Visibility="Hidden"   />
+        <Label x:Name="commentLabel" Content="Comment" HorizontalAlignment="Left" Margin="443,476,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,1.346" Visibility="Hidden"/>
+        <Button x:Name="pathUpdateButton" Content="File path modify" HorizontalAlignment="Left" Margin="222,449,0,0" VerticalAlignment="Top" Width="140" Click="PathUpdateButton_Click" Visibility="Hidden"/>
+        <Button x:Name="deleteFromDataBaseButton" Content="Delete from database" HorizontalAlignment="Left" Margin="222,474,0,0" VerticalAlignment="Top" Width="140" Click="DeleteFromDataBaseButton_Click" Visibility="Hidden"/>
+        <TextBlock x:Name="commentTextBlock" HorizontalAlignment="Left" Margin="510,474,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="43" Width="278" Visibility="Hidden"/>
+        <Button x:Name="commentUpdateButton" Content="Update comment" HorizontalAlignment="Left" Margin="673,533,0,0" VerticalAlignment="Top" Width="104" Click="CommentUpdateButton_Click" Visibility="Hidden"/>
+        <RichTextBox x:Name="richTextUpdater" HorizontalAlignment="Left" Height="27" Margin="452,526,0,0" VerticalAlignment="Top" Width="197" GotFocus="RichTextUpdater_GotFocus" Visibility="Hidden">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Enter updated comment..."/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button x:Name="playButton" Content="Play" HorizontalAlignment="Left" Height="55" Margin="211,64,0,0" VerticalAlignment="Top" Width="174" Click="PlayButton_Click" FontSize="24" BorderBrush="#FF6E2424" BorderThickness="4" RenderTransformOrigin="0.5,0.5" Padding="1" Visibility="Hidden">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" Opacity="0.65">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFE23434"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="actorsText"  HorizontalAlignment="Stretch" TextWrapping="Wrap"  FontSize="12" Text="{Binding InstructionLabel}"  Margin="474,269,4,0" RenderTransformOrigin="0.485,0.463" Height="51" VerticalAlignment="Top" Visibility="Hidden"   />
+        <TextBlock x:Name="languageText"  HorizontalAlignment="Stretch" TextWrapping="Wrap"  FontSize="12" Text="{Binding InstructionLabel}"  Margin="423,95,259,0" RenderTransformOrigin="0.485,0.463" Height="52" VerticalAlignment="Top" Visibility="Hidden"   />
+
+
+
+    </Grid>
+</Page>

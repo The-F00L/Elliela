@@ -4,8 +4,8 @@
         xmlns:local="clr-namespace:Elliela2._0"
         Title="Elliale 2.0" Height="782" Width="835.333"
         
-        MinWidth="300" SizeToContent="WidthAndHeight" Closed="MainWindow_Closed" >
-    
+        MinWidth="300" SizeToContent="WidthAndHeight" Closed="MainWindow_Closed" Background="Black" KeyDown="MainWindow_KeyDown" >
+
 
     <Grid>
         <Grid.RowDefinitions>
@@ -41,15 +41,24 @@
             <Separator Margin="0,0,0,-2" Width="13" Background="#FF636D78" RenderTransformOrigin="0.5,0.5"/>
 
 
-            <Button Name="searchDBButton" Height="46" VerticalAlignment="Top" Width="77" Margin="0,0,0,-9" Click="SearchDBButton_Click">
+            <Button Name="searchDBButton" Height="40" VerticalAlignment="Top" Width="77" Margin="0,0,0,-9" Click="SearchDBButton_Click">
 
                 <Image Source="rsc/search.png" Stretch="Uniform"/>
 
             </Button>
 
+            <Button Name="localDBButton" Height="40" VerticalAlignment="Top" Width="77" Margin="0,0,0,-9" Click="LocalDBButton_Click">
+
+                <Image Source="rsc/localDBComputer.png" Stretch="Uniform" Height="36" Width="35"/>
+
+            </Button>
+            <Button x:Name="aboutButton" Height="40" VerticalAlignment="Top" Width="60" Margin="0,0,0,-9" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" Click="AboutButton_Click">
+                <Image Source="rsc/about.png" />
+            </Button>
+
         </ToolBar>
 
-        <MediaElement Name="mediaPlayer" LoadedBehavior="Manual" Stretch="None" Grid.Row="1" Margin="0,5,0,0" />
+        <MediaElement Name="mediaPlayer" x:FieldModifier="public" LoadedBehavior="Manual" Stretch="None" Grid.Row="1" />
 
         <StatusBar Grid.Row="2">
             <StatusBar.ItemsPanel>

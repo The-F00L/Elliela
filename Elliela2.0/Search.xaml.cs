@@ -717,7 +717,7 @@ namespace Elliela2._0
                     {
                         image7.Source = new BitmapImage(new Uri("/rsc/notavaible.jpg", UriKind.Relative));
                         image7.Visibility = Visibility.Visible;
-                        button2.Visibility = Visibility.Visible;
+                        button7.Visibility = Visibility.Visible;
                     }
                     if (!posters[7].Trim().ToLower().Equals("n/a"))
                     {
@@ -898,7 +898,6 @@ namespace Elliela2._0
                     film10.Content = title[9];
                     break;
                 default:
-                    MessageBox.Show("baszdmeg");
                     break;
             }
         }

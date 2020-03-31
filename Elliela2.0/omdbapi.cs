@@ -22,7 +22,7 @@ namespace Elliela2._0
         private string name;
         private string type;
         public omdbapi(string name,string type) {
-            this.name = name;
+            this.name = name.TrimEnd();
             this.type = type;
             getBase();
         }
