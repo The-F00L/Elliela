@@ -61,30 +61,47 @@ namespace Elliela2._0
         public overView()
         {
             InitializeComponent();
-
+            
             posterImg.Visibility = Visibility.Collapsed;
+
+            imdbidLabel.Visibility = Visibility.Collapsed;
+            imdbidText.Visibility = Visibility.Collapsed;
             titleLabel.Visibility = Visibility.Collapsed;
+            titleText.Visibility = Visibility.Collapsed;
             yearLabel.Visibility = Visibility.Collapsed;
+            yearText.Visibility = Visibility.Collapsed;
             ratedLabel.Visibility = Visibility.Collapsed;
+            ratedText.Visibility = Visibility.Collapsed;
             releasedLabel.Visibility = Visibility.Collapsed;
+            releasedText.Visibility = Visibility.Collapsed;
             runtimeLabel.Visibility = Visibility.Collapsed;
+            runtimeText.Visibility = Visibility.Collapsed;
             genreLabel.Visibility = Visibility.Collapsed;
+            genreText.Visibility = Visibility.Collapsed;
             directorLabel.Visibility = Visibility.Collapsed;
+            directorText.Visibility = Visibility.Collapsed;
             writerLabel.Visibility = Visibility.Collapsed;
+            writerText.Visibility = Visibility.Collapsed;
             actorsLabel.Visibility = Visibility.Collapsed;
+            actorsText.Visibility = Visibility.Collapsed;
             plotLabel.Visibility = Visibility.Collapsed;
+            plotText.Visibility = Visibility.Collapsed;
             langLabel.Visibility = Visibility.Collapsed;
+            languageText.Visibility = Visibility.Collapsed;
             countryLabel.Visibility = Visibility.Collapsed;
+            countryText.Visibility = Visibility.Collapsed;
             awardsLabel.Visibility = Visibility.Collapsed;
+            awardsText.Visibility = Visibility.Collapsed;
             typeLabel.Visibility = Visibility.Collapsed;
+            typeText.Visibility = Visibility.Collapsed;
             dvdLabel.Visibility = Visibility.Collapsed;
+            dvdText.Visibility = Visibility.Collapsed;
             richTextUpdater.Visibility = Visibility.Collapsed;
             commentTextBlock.Visibility = Visibility.Collapsed;
             commentUpdateButton.Visibility = Visibility.Collapsed;
             commentLabel.Visibility = Visibility.Collapsed;
             playButton.Visibility = Visibility.Collapsed;
             pathUpdateButton.Visibility = Visibility.Collapsed;
-            dvdText.Visibility = Visibility.Collapsed;
             deleteFromDataBaseButton.Visibility = Visibility.Collapsed;
 
         }
@@ -93,21 +110,39 @@ namespace Elliela2._0
         private void ListTitle_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             posterImg.Visibility = Visibility.Visible;
+
+            imdbidLabel.Visibility = Visibility.Visible;
+            imdbidText.Visibility = Visibility.Visible;
             titleLabel.Visibility = Visibility.Visible;
+            titleText.Visibility = Visibility.Visible;
             yearLabel.Visibility = Visibility.Visible;
+            yearText.Visibility = Visibility.Visible;
             ratedLabel.Visibility = Visibility.Visible;
+            ratedText.Visibility = Visibility.Visible;
             releasedLabel.Visibility = Visibility.Visible;
+            releasedText.Visibility = Visibility.Visible;
             runtimeLabel.Visibility = Visibility.Visible;
+            runtimeText.Visibility = Visibility.Visible;
             genreLabel.Visibility = Visibility.Visible;
+            genreText.Visibility = Visibility.Visible;
             directorLabel.Visibility = Visibility.Visible;
+            directorText.Visibility = Visibility.Visible;
             writerLabel.Visibility = Visibility.Visible;
+            writerText.Visibility = Visibility.Visible;
             actorsLabel.Visibility = Visibility.Visible;
+            actorsText.Visibility = Visibility.Visible;
             plotLabel.Visibility = Visibility.Visible;
+            plotText.Visibility = Visibility.Visible;
             langLabel.Visibility = Visibility.Visible;
+            languageText.Visibility = Visibility.Visible;
             countryLabel.Visibility = Visibility.Visible;
+            countryText.Visibility = Visibility.Visible;
             awardsLabel.Visibility = Visibility.Visible;
+            awardsText.Visibility = Visibility.Visible;
             typeLabel.Visibility = Visibility.Visible;
+            typeText.Visibility = Visibility.Visible;
             dvdLabel.Visibility = Visibility.Visible;
+            dvdText.Visibility = Visibility.Visible;
             richTextUpdater.Visibility = Visibility.Visible;
             commentTextBlock.Visibility = Visibility.Visible;
             commentUpdateButton.Visibility = Visibility.Visible;
@@ -115,7 +150,8 @@ namespace Elliela2._0
             playButton.Visibility = Visibility.Visible;
             pathUpdateButton.Visibility = Visibility.Visible; 
             deleteFromDataBaseButton.Visibility = Visibility.Visible;
-            dvdText.Visibility = Visibility.Visible;
+           
+
 
             int selected = this.listTitle.SelectedIndex;
             if (selected != -1)
@@ -251,6 +287,7 @@ namespace Elliela2._0
             {
                 posterImg.Source = new BitmapImage(new Uri(poster));
             }
+            imdbidText.Content = this.imdbId;
             titleText.Content = this.Title1;
             yearText.Content = this.year;
             ratedText.Content = this.rated;
@@ -330,21 +367,39 @@ namespace Elliela2._0
             listTitle.ItemsSource = tempTitle;
 
             posterImg.Visibility = Visibility.Collapsed;
+
+            imdbidLabel.Visibility = Visibility.Collapsed;
+            imdbidText.Visibility = Visibility.Collapsed;
             titleLabel.Visibility = Visibility.Collapsed;
+            titleText.Visibility = Visibility.Collapsed;
             yearLabel.Visibility = Visibility.Collapsed;
+            yearText.Visibility = Visibility.Collapsed;
             ratedLabel.Visibility = Visibility.Collapsed;
+            ratedText.Visibility = Visibility.Collapsed;
             releasedLabel.Visibility = Visibility.Collapsed;
+            releasedText.Visibility = Visibility.Collapsed;
             runtimeLabel.Visibility = Visibility.Collapsed;
+            runtimeText.Visibility = Visibility.Collapsed;
             genreLabel.Visibility = Visibility.Collapsed;
+            genreText.Visibility = Visibility.Collapsed;
             directorLabel.Visibility = Visibility.Collapsed;
+            directorText.Visibility = Visibility.Collapsed;
             writerLabel.Visibility = Visibility.Collapsed;
+            writerText.Visibility = Visibility.Collapsed;
             actorsLabel.Visibility = Visibility.Collapsed;
+            actorsText.Visibility = Visibility.Collapsed;
             plotLabel.Visibility = Visibility.Collapsed;
+            plotText.Visibility = Visibility.Collapsed;
             langLabel.Visibility = Visibility.Collapsed;
+            languageText.Visibility = Visibility.Collapsed;
             countryLabel.Visibility = Visibility.Collapsed;
+            countryText.Visibility = Visibility.Collapsed;
             awardsLabel.Visibility = Visibility.Collapsed;
+            awardsText.Visibility = Visibility.Collapsed;
             typeLabel.Visibility = Visibility.Collapsed;
+            typeText.Visibility = Visibility.Collapsed;
             dvdLabel.Visibility = Visibility.Collapsed;
+            dvdText.Visibility = Visibility.Collapsed;
             richTextUpdater.Visibility = Visibility.Collapsed;
             commentTextBlock.Visibility = Visibility.Collapsed;
             commentUpdateButton.Visibility = Visibility.Collapsed;

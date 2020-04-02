@@ -103,7 +103,7 @@ namespace Elliela2._0
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            localDBBrowser.Path = this.local;
+           localDBBrowser.Path = this.local;
             localDBBrowser.Play = true;
             if (this.type.Equals("series"))
             {
@@ -432,6 +432,9 @@ namespace Elliela2._0
                 this.viewResultButton.Visibility = Visibility.Hidden;
 
                 this.posterImg.Visibility = Visibility.Visible;
+
+                this.imdbidLabel.Visibility = Visibility.Visible;
+                this.imdbidText.Visibility = Visibility.Visible;
                 this.titleLabel.Visibility = Visibility.Visible;
                 this.yearLabel.Visibility = Visibility.Visible;
                 this.ratedLabel.Visibility = Visibility.Visible;
@@ -478,22 +481,40 @@ namespace Elliela2._0
             this.addFilterButton.Visibility = Visibility.Visible;
             this.deleteParameterButton.Visibility = Visibility.Visible;
             this.viewResultButton.Visibility = Visibility.Visible;
+
             this.posterImg.Visibility = Visibility.Hidden;
+            this.imdbidLabel.Visibility = Visibility.Hidden;
+            this.imdbidText.Visibility = Visibility.Hidden;
             this.titleLabel.Visibility = Visibility.Hidden;
+            this.titleText.Visibility = Visibility.Hidden;
             this.yearLabel.Visibility = Visibility.Hidden;
+            this.yearText.Visibility = Visibility.Hidden;
             this.ratedLabel.Visibility = Visibility.Hidden;
+            this.ratedText.Visibility = Visibility.Hidden;
             this.releasedLabel.Visibility = Visibility.Hidden;
+            this.releasedText.Visibility = Visibility.Hidden;
             this.runtimeLabel.Visibility = Visibility.Hidden;
+            this.runtimeText.Visibility = Visibility.Hidden;
             this.genreLabel.Visibility = Visibility.Hidden;
+            this.genreText.Visibility = Visibility.Hidden;
             this.directorLabel.Visibility = Visibility.Hidden;
+            this.directorText.Visibility = Visibility.Hidden;
             this.writerLabel.Visibility = Visibility.Hidden;
+            this.writerText.Visibility = Visibility.Hidden;
             this.actorsLabel.Visibility = Visibility.Hidden;
+            this.actorsText.Visibility = Visibility.Hidden;
             this.plotLabel.Visibility = Visibility.Hidden;
+            this.plotText.Visibility = Visibility.Hidden;
             this.langLabel.Visibility = Visibility.Hidden;
+            this.languageText.Visibility = Visibility.Hidden;
             this.countryLabel.Visibility = Visibility.Hidden;
+            this.countryText.Visibility = Visibility.Hidden;
             this.awardsLabel.Visibility = Visibility.Hidden;
+            this.awardsText.Visibility = Visibility.Hidden;
             this.typeLabel.Visibility = Visibility.Hidden;
+            this.typeText.Visibility = Visibility.Hidden;
             this.dvdLabel.Visibility = Visibility.Hidden;
+            this.dvdText.Visibility = Visibility.Hidden;
             this.richTextUpdater.Visibility = Visibility.Hidden;
             this.commentTextBlock.Visibility = Visibility.Hidden;
             this.commentUpdateButton.Visibility = Visibility.Hidden;
@@ -503,6 +524,7 @@ namespace Elliela2._0
             this.deleteFromDataBaseButton.Visibility = Visibility.Hidden;
             this.resultlistTitle.Visibility = Visibility.Hidden;
             this.clearResult.Visibility = Visibility.Hidden;
+                  
         }
 
         private void PathUpdateButton_Click(object sender, RoutedEventArgs e)
@@ -607,25 +629,42 @@ namespace Elliela2._0
         {
 
             manageLocalSave.deleteFromLocal(this.type, this.rowid);
+            resultlistTitle.Items.Remove(resultlistTitle.SelectedIndex);
             tempRecords.RemoveAt(resultlistTitle.SelectedIndex);
-            
 
-            posterImg.Visibility = Visibility.Collapsed;
+
+            imdbidLabel.Visibility = Visibility.Collapsed;
+            imdbidText.Visibility = Visibility.Collapsed;
             titleLabel.Visibility = Visibility.Collapsed;
+            titleText.Visibility = Visibility.Collapsed;
             yearLabel.Visibility = Visibility.Collapsed;
+            yearText.Visibility = Visibility.Collapsed;
             ratedLabel.Visibility = Visibility.Collapsed;
+            ratedText.Visibility = Visibility.Collapsed;
             releasedLabel.Visibility = Visibility.Collapsed;
+            releasedText.Visibility = Visibility.Collapsed;
             runtimeLabel.Visibility = Visibility.Collapsed;
+            runtimeText.Visibility = Visibility.Collapsed;
             genreLabel.Visibility = Visibility.Collapsed;
+            genreText.Visibility = Visibility.Collapsed;
             directorLabel.Visibility = Visibility.Collapsed;
+            directorText.Visibility = Visibility.Collapsed;
             writerLabel.Visibility = Visibility.Collapsed;
+            writerText.Visibility = Visibility.Collapsed;
             actorsLabel.Visibility = Visibility.Collapsed;
+            actorsText.Visibility = Visibility.Collapsed;
             plotLabel.Visibility = Visibility.Collapsed;
+            plotText.Visibility = Visibility.Collapsed;
             langLabel.Visibility = Visibility.Collapsed;
+            languageText.Visibility = Visibility.Collapsed;
             countryLabel.Visibility = Visibility.Collapsed;
+            countryText.Visibility = Visibility.Collapsed;
             awardsLabel.Visibility = Visibility.Collapsed;
+            awardsText.Visibility = Visibility.Collapsed;
             typeLabel.Visibility = Visibility.Collapsed;
+            typeText.Visibility = Visibility.Collapsed;
             dvdLabel.Visibility = Visibility.Collapsed;
+            dvdText.Visibility = Visibility.Collapsed;
             richTextUpdater.Visibility = Visibility.Collapsed;
             commentTextBlock.Visibility = Visibility.Collapsed;
             commentUpdateButton.Visibility = Visibility.Collapsed;

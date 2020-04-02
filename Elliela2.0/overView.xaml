@@ -17,7 +17,7 @@
         </Grid.Background>
 
         <ListBox x:Name="listTitle" HorizontalAlignment="Left" Height="469" Margin="10,84,0,0" VerticalAlignment="Top" Width="178" SelectionChanged="ListTitle_SelectionChanged" Background="#FFFFE4E4"/>
-        <Image x:Name="posterImg" HorizontalAlignment="Left" Height="310" Margin="193,132,0,0" VerticalAlignment="Top" Width="214"/>
+        <Image x:Name="posterImg" HorizontalAlignment="Left" Height="310" Margin="193,134,0,0" VerticalAlignment="Top" Width="214"/>
         <Label x:Name="titleLabel" Content="Title:" HorizontalAlignment="Left" Margin="177,20,0,0" VerticalAlignment="Top" Height="30" Width="53" FontSize="16"/>
         <Label x:Name="titleText" Content="" HorizontalAlignment="Left" Margin="235,4,0,0" VerticalAlignment="Top" Width="331" Height="51" FontSize="24" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
@@ -98,7 +98,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Button x:Name="playButton" Content="Play" HorizontalAlignment="Left" Height="55" Margin="211,64,0,0" VerticalAlignment="Top" Width="174" Click="PlayButton_Click" FontSize="24" BorderBrush="#FF6E2424" BorderThickness="4" RenderTransformOrigin="0.5,0.5" Padding="1">
+        <Button x:Name="playButton" Content="Play" HorizontalAlignment="Left" Height="55" Margin="210,74,0,0" VerticalAlignment="Top" Width="174" Click="PlayButton_Click" FontSize="24" BorderBrush="#FF6E2424" BorderThickness="4" RenderTransformOrigin="0.5,0.5" Padding="1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" Opacity="0.65">
                     <GradientStop Color="Black" Offset="1"/>
@@ -109,6 +109,8 @@
         <TextBlock x:Name="actorsText"  HorizontalAlignment="Stretch" TextWrapping="Wrap"  FontSize="12" Text="{Binding InstructionLabel}"  Margin="474,269,4,0" RenderTransformOrigin="0.485,0.463" Height="51" VerticalAlignment="Top"   />
         <TextBlock x:Name="languageText"  HorizontalAlignment="Stretch" TextWrapping="Wrap"  FontSize="12" Text="{Binding InstructionLabel}"  Margin="423,95,259,0" RenderTransformOrigin="0.485,0.463" Height="52" VerticalAlignment="Top"   />
         <Label Content="Select type:" HorizontalAlignment="Left" Margin="29,10,0,0" VerticalAlignment="Top" Height="32" Width="102" FontSize="18"/>
+        <Label x:Name="imdbidLabel" Content="IMDB ID:" HorizontalAlignment="Left" Margin="217,48,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="imdbidText" Content="" HorizontalAlignment="Left" Margin="279,48,0,0" VerticalAlignment="Top" Width="92"/>
 
     </Grid>
 </Page>

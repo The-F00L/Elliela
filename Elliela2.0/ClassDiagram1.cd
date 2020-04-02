@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Elliela2._0.AboutBox">
+    <Position X="2.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kIAAAAgAACAgCAUAAACAAAADAAAAEIIAAAAAAAAAAAA=</HashCode>
+      <FileName>AboutBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Elliela2._0.App">
+    <Position X="5.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Elliela2._0.detailsINFO" BaseTypeListCollapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAUUAAAAQEAYAACQAIAEEAgCAQABAAQCURAAAAYggAA=</HashCode>
+      <FileName>detailsINFO.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.231" Collapsed="true" />
+  </Class>
+  <Class Name="Elliela2._0.ImdbEntity">
+    <Position X="11.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAADABAgERQCgIAAAAAAAIQEBEAAQAEAAMgIAA=</HashCode>
+      <FileName>ImdbEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Elliela2._0.ImdbSearch">
+    <Position X="10" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAQAAgAAA=</HashCode>
+      <FileName>imdbSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Elliela2._0.search">
+    <Position X="10" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAEAAAAAAAAAAAAAAEAAAAQAAAAAgAAA=</HashCode>
+      <FileName>imdbSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Elliela2._0.localDBBrowser" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAIAAAIAABAGAAIAAACAAAAAgAAAAIAAAAA=</HashCode>
+      <FileName>localDBBrowser.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.172" Collapsed="true" />
+  </Class>
+  <Class Name="Elliela2._0.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEAAAAgQA0ACAAABAACAAAAIQAECBBAAAABAAEAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Elliela2._0.manageLocalSave">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACAAgAYAgGgAAEAAAACQAQEAGAIIBGIQIAICCiAIAA=</HashCode>
+      <FileName>manageLocalSave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Elliela2._0.omdbapi">
+    <Position X="8" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAEAAECABAAAAAAAAAAFAAAAABAIAAEgAAA=</HashCode>
+      <FileName>omdbapi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Elliela2._0.overView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACUEAACQQAAYAkCAAIAEAQACAQDFQAQS0TBIECQggAA=</HashCode>
+      <FileName>overView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Elliela2._0.Rating">
+    <Position X="0.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Rating.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Elliela2._0.record">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQEABAERAAYgESAGIIEAAACAQJREAWCVRAEAAUgAAA=</HashCode>
+      <FileName>record.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Elliela2._0.Search" BaseTypeListCollapsed="true">
+    <Position X="8" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgBAIAAAQAAAAAAAACAAAAEAAADAcA8AAAAAAAAgAAA=</HashCode>
+      <FileName>Search.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Elliela2._0.searchLocal" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BGUEBACQSAAYAFiBAIAEAQAaAQHVAISS0TBKEGYgoAA=</HashCode>
+      <FileName>searchLocal.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Elliela2._0.Properties.Resources" Collapsed="true">
+    <Position X="5.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAQAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Elliela2._0.Properties.Settings" Collapsed="true">
+    <Position X="5.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -71,6 +71,7 @@ namespace Elliela2._0
                     obj = oJS.Deserialize<ImdbEntity>(json);
                         if (obj.Response == "True")
                         {
+                    imdbId = obj.imdbID;
                             title = obj.Title;
                             year = obj.Year;
                             rated = obj.Rated;
@@ -118,6 +119,7 @@ namespace Elliela2._0
             {
                 posterImg.Source = new BitmapImage(new Uri(poster));
             }
+            imdbidText.Content = this.imdbId;
             titleText.Content = this.title;
             yearText.Content = this.year;
             ratedText.Content = this.rated;
@@ -139,6 +141,7 @@ namespace Elliela2._0
             boxOfficeText.Content = this.boxOffice;
             productionText.Content = this.production;
             webSiteText.Content = this.website;
+
 
         }
 

@@ -1080,7 +1080,7 @@ namespace Elliela2._0
                 }
             }
 
-            return temp;
+            return temp.Distinct().ToList();
         }
 
 

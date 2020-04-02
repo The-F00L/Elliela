@@ -57,11 +57,11 @@ namespace Elliela2._0
             }
             catch (WebException e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Check your internet connection!");
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                MessageBox.Show("Error while trying connect the internet'");
             }
             searchBase();
         }

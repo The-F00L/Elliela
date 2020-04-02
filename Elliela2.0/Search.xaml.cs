@@ -66,11 +66,13 @@ namespace Elliela2._0
         private List<string> title;
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-           
+            
             omdbapi omdbAPI = new omdbapi(nameText.Text, typeCombo.Text);
             imdbID = omdbAPI.getID();
             posters = omdbAPI.getPoster();
             title = omdbAPI.getTitle();
+            
+            
             
             //clear images
             image1.Source = null;

@@ -20,10 +20,10 @@
         <ComboBox x:Name="filterTypeList" HorizontalAlignment="Left" Margin="72,75,0,0" VerticalAlignment="Top" Width="148" DropDownClosed="FilterTypeList_DropDownClosed" Height="37" FontSize="18" DropDownOpened="FilterTypeList_DropDownOpened" RenderTransformOrigin="0.493,0.544" Visibility="Visible"/>
         <ListBox x:Name="optionList"  HorizontalAlignment="Left" Height="417" Margin="45,120,0,0" VerticalAlignment="Top" Width="214" Visibility="Visible"/>
         <ListBox x:Name="ParameterList" HorizontalAlignment="Left" Height="417" Margin="599,120,0,0" VerticalAlignment="Top" Width="214" Visibility="Visible"/>
-        <Button x:Name="addFilterButton" Content="Add filter" HorizontalAlignment="Left" Margin="348,174,0,0" VerticalAlignment="Top" Width="158" Height="36" Click="AddFilterButton_Click" Visibility="Visible"/>
+        <Button x:Name="addFilterButton" Content="Add parameter" HorizontalAlignment="Left" Margin="348,174,0,0" VerticalAlignment="Top" Width="158" Height="36" Click="AddFilterButton_Click" Visibility="Visible"/>
         <Button x:Name="deleteParameterButton"  Content="Delete parameter" HorizontalAlignment="Left" Margin="348,244,0,0" VerticalAlignment="Top" Width="158" Height="36" Click="DeleteParameterButton_Click" Visibility="Visible"/>
         <Button x:Name="viewResultButton" Content="View Result" HorizontalAlignment="Left" Margin="348,309,0,0" VerticalAlignment="Top" Width="158" Height="36" Click="ViewResultButton_Click" Visibility="Visible"/>
-        <Button x:Name="clearResult" Content="Clear" HorizontalAlignment="Left" Height="30" Margin="33,31,0,0" VerticalAlignment="Top" Width="112"  Visibility="Hidden" Click="ClearResult_Click" FontSize="16" BorderBrush="#FFEAAAAA">
+        <Button x:Name="clearResult" Content="Back" HorizontalAlignment="Left" Height="30" Margin="33,31,0,0" VerticalAlignment="Top" Width="112"  Visibility="Hidden" Click="ClearResult_Click" FontSize="16" BorderBrush="#FFEAAAAA">
             <Button.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="Black"/>
@@ -109,7 +109,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Button x:Name="playButton" Content="Play" HorizontalAlignment="Left" Height="55" Margin="211,64,0,0" VerticalAlignment="Top" Width="174" Click="PlayButton_Click" FontSize="24" BorderBrush="#FF6E2424" BorderThickness="4" RenderTransformOrigin="0.5,0.5" Padding="1" Visibility="Hidden">
+        <Button x:Name="playButton" Content="Play" HorizontalAlignment="Left" Height="55" Margin="207,75,0,0" VerticalAlignment="Top" Width="174" Click="PlayButton_Click" FontSize="24" BorderBrush="#FF6E2424" BorderThickness="4" RenderTransformOrigin="0.5,0.5" Padding="1" Visibility="Hidden">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" Opacity="0.65">
                     <GradientStop Color="Black" Offset="1"/>
@@ -119,6 +119,8 @@
         </Button>
         <TextBlock x:Name="actorsText"  HorizontalAlignment="Stretch" TextWrapping="Wrap"  FontSize="12" Text="{Binding InstructionLabel}"  Margin="474,269,4,0" RenderTransformOrigin="0.485,0.463" Height="51" VerticalAlignment="Top" Visibility="Hidden"   />
         <TextBlock x:Name="languageText"  HorizontalAlignment="Stretch" TextWrapping="Wrap"  FontSize="12" Text="{Binding InstructionLabel}"  Margin="423,95,259,0" RenderTransformOrigin="0.485,0.463" Height="52" VerticalAlignment="Top" Visibility="Hidden"   />
+        <Label x:Name="imdbidLabel" Content="IMDB ID:" HorizontalAlignment="Left" Margin="238,49,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="imdbidText" Content="" HorizontalAlignment="Left" Margin="300,49,0,0" VerticalAlignment="Top" Width="92"/>
 
 
 

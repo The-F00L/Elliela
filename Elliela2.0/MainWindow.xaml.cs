@@ -50,8 +50,17 @@ namespace Elliela2._0
             }
             if (localDB.getPlay())
             {
-                mediaPlayer.Source = localDB.getPath();
-                mediaPlayer.Play();
+                try
+                {
+                    mediaPlayer.Source = localDB.getPath();
+                    mediaPlayer.Play();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("File not found");
+                }
+               
+               
                 mediaPlayer.Stretch = Stretch.Uniform;
                 localDB.Visibility = Visibility.Hidden;
                 localDB.setPlay();
